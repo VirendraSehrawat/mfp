@@ -7,9 +7,7 @@ const devConfig = {
     mode:'development',
     devServer:{
         port:8080,
-        historyApiFallback:{
-            index:'index.html'
-        }
+        historyApiFallback:true
     },
     plugins:[
        
@@ -17,7 +15,9 @@ const devConfig = {
             name:'container',
             remotes:[
                 {
-                    'mod_marketing':'mod_marketing@http://localhost:8081/remoteEntry.js'
+                    'mod_marketing':'mod_marketing@http://localhost:8081/remoteEntry.js',
+                    'mod_auth':'mod_auth@http://localhost:8082/remoteEntry.js'
+
                 }
             ],
             shared:packageJson.dependencies

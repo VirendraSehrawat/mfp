@@ -1,5 +1,5 @@
 import React,{useRef, useEffect} from "react";
-import {mount as markertingMount} from 'mod_marketing/marketingIndex';
+import {mount as markertingMount} from 'mod_auth/authIndex';
 
 export default () => {
     const ref = useRef(null);
